@@ -56,7 +56,7 @@ if [ -f /etc/os-release ] ; then
 	elif [ "${ID}" = "ubuntu" ] ; then
 		distrodetect="Ubuntu"
 		distroinstaller="ubuntu"
-	elif [ "${ID_LIKE}" = "ubuntu" ] ; then
+	elif [[ "${ID_LIKE}" = "ubuntu" || "${ID_LIKE}" = "ubuntu debian" ]] ; then
 		if [ "${ID}" = "elementary" ] ; then
 			distrodetect="Elementary"
 		elif [ "${ID}" = "linuxmint" ] ; then
